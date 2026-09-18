@@ -1,0 +1,33 @@
+# --- Standard noise ---
+.DS_Store
+*.log
+__pycache__/
+*.pyc
+.env
+node_modules/
+
+# --- Not copied into this repo at all, excluded on purpose ---
+# Rendered briefs/digests/console pages are Art's real calendar, Slack, and
+# Gmail content. State files hold live follow-up tracking with real names.
+# Neither was ever copied out of the workstation folder into this repo.
+output/
+state/
+
+# --- prd/: included, sanitized ---
+# The 4 Follow-Up Finder PRDs originally named real colleagues and real
+# partner deals (an MNDA follow-up, a partner deck review). Copied in with
+# those names substituted for fictional stand-ins (see each file's own note
+# under its frontmatter) rather than excluded outright, since the design
+# reasoning itself is worth keeping in version control.
+
+# --- resources/: mostly excluded for the same reason ---
+# The test/validation reports in this folder are dry runs and control-test
+# comparisons against Art's real Slack/Gmail/Calendar activity — they quote
+# real messages, real timestamps, and real colleagues'/partners' names.
+# Only the one file that's pure logic (no real names) is included below.
+resources/*
+!resources/2026-09-14-follow-up-finder-core-rules.md
+
+# --- Not copied into this repo: packaged installables ---
+# skills-packaged/*.skill is a build artifact (zip of SKILL.md + CHANGELOG.md),
+# regenerable from what's already in each skill folder here. Never copied in.
